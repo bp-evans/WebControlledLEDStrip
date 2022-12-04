@@ -19,6 +19,11 @@ Once you have Visual Studio Code, navigate to extensions tab and search for Plat
   <img alt="Image Failed to Display">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/44142919/205474867-2f855dcd-ef28-4ecf-887e-450985329384.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/44142919/205474867-2f855dcd-ef28-4ecf-887e-450985329384.png">
+  <img alt="Image Failed to Display">
+</picture>
 
 Make sure your LED strip and ESP32 are connected as shown below in the diagram.
 
