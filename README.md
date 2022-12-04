@@ -14,7 +14,9 @@ To start, make sure you have PlatformIO installed and download the zip of the co
 Once you have Visual Studio Code, navigate to extensions tab and search for Platform IO. Once found, install it.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-
+  <source media="(prefers-color-scheme: dark)" srcset="">
+  <source media="(prefers-color-scheme: light)" srcset="">
+  <img alt="Image Failed to Display">
 </picture>
 
 
