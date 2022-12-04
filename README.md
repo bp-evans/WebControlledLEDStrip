@@ -14,6 +14,8 @@ To start, make sure you have PlatformIO installed and download the zip of the co
 Once you have Visual Studio Code, navigate to extensions tab and search for Platform IO. Once found, install it.
 <img width="236" alt="Screen Shot 2022-12-03 at 9 28 24 PM" src="https://user-images.githubusercontent.com/44142919/205474727-52765594-7b35-4a41-8f35-1a9ea1dbeea9.png">
 
+
+
 Make sure your LED strip and ESP32 are connected as shown below in the diagram.
 
 
