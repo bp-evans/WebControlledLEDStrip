@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pattern Selection Page</title>
+        <style media="screen">
+            body {
+                margin:0; padding:0; 
+                box-sizing: border-box;
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                font-family: verdana;
+                background-color: rgb(189, 189, 189);
+            }
+            .main {
+                height: 450x;
+                width: 300px;
+                background: #333;
+                border-radius: 10px;
+                display: grid;
+                place-items: center;
+                color: #fff;
+                font-family: verdana;
+
+            }
+            .color {
+                height: 200px;
+                width: 200px;
+                background: #333;
+                border-radius: 10px;
+                display: grid;
+                place-items: center;
+                color: #fff;
+                font-family: verdana;
+                align-items: center;
+
+            }
+            #box {
+                height: 60px;
+                width: 80%;
+                border: none;
+                outline: none;
+                border-radius: 50px;
+                text-align: center;
+            }
+            input[type="range"]{
+                -webkit-appearance: none;
+                height: 10px;
+                width: 80%;
+                border-radius: 50px;
+                outline:none;
+            }
+            .color #red1 {
+                background: linear-gradient(90deg, #000, red);
+            }
+            .color #green1 {
+                background: linear-gradient(90deg, #000, green);
+            }
+            .color #blue1 {
+                background: linear-gradient(90deg, #000, blue);
+            }
+
+        </style>
+    </head>
+    
+    <body>
+        <h5><a href="index.html">Home</a></h5>
+        <h1>Color Selection Page</h1>
+        <h3>For Selecting Simple Solid Colors</h3>
+    </body>
+    <div class = "main"> 
+        Select Pattern: <select id="patternSelect" name="patternSelect">
+            <option value="ripple">Ripple</option>
+            <option value="stars">Stars</option>
+            <option value="inout">In and Out</option>
+        </select>
+        Color Preference: <select id="colorPref" name="colorNum" onchange="showColor()"> 
+            <option value="rand">Random Colors</option>
+            <option value="color">Choose Color</option>
+        </select>
+        
+    </div>
+
+    <div id="colorDiv" class="color" style="display: none;">
+        Red Value: <input type="range" id="red1" value="255" min="0" max="255">
+        Green Value: <input type="range" id="green1" value="255" min="0" max="255">
+        Blue Value: <input type="range" id="blue1" value="255" min="0" max="255">
+    </div>
+
+    <button type="button" onclick="myPatternPicker()" id="submitBtn">Submit</button>
+
+
+    <script type="text/javascript">
+
+        function showColor() {
+            var colorPref = document.getElementById("colorPref").value;
+            var d = document.getElementById("colorDiv");
+            if(colorPref == "color") {
+                d.style.display = 'block';
+            } else {
+                d.style.display = 'none';
+            }
+        }
+
+
+        function myPatternPicker() {
+            var xhr = new XMLHttpRequest();
+            var colorChoice = document.getElementById("colorPref").value;
+            var pattern = document.getElementById("patternSelect").value;
+            if(colorChoice == "color") {
+                var red1 = document.getElementById("red1").value;
+                var blue1 = document.getElementById("blue1").value;
+                var green1 = document.getElementById("green1").value;
+            } else {
+                var red1 = 0;
+                var blue1 = 0;
+                var green1 = 0;
+            }
+            xhr.open("GET", "/updatePattern?pattern="+pattern+"&colorPref="+colorChoice+"&red1="+red1+"&blue1="+blue1+"&green1="+green1, true);
+            xhr.send();
+        }
+       
+    </script>
+</html>
