@@ -19,18 +19,26 @@ Once you have Visual Studio Code, navigate to extensions tab and search for Plat
   <img alt="Image Failed to Display">
 </picture>
 
+Make sure your LED strip and ESP32 are connected as shown below in the diagram.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/44142919/205474867-2f855dcd-ef28-4ecf-887e-450985329384.png">
   <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/44142919/205474867-2f855dcd-ef28-4ecf-887e-450985329384.png">
   <img alt="Image Failed to Display">
 </picture>
 
-Make sure your LED strip and ESP32 are connected as shown below in the diagram.
-
-
 Once this is done click the PlatformIO home button to open up the main PLatformIO interface. Click on Open Project and select the unzipped LEDStripController folder.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/44142919/205474927-fe9d1fe1-f3d2-4eea-ae04-2d73b3f9113e.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/44142919/205474927-fe9d1fe1-f3d2-4eea-ae04-2d73b3f9113e.png">
+  <img alt="Image Failed to Display">
+</picture>
 
 Once this project is open, navigate to the main.cpp file. You will need to edit/double check a few things. First, ensure that the numOfLeds is set to the correct number of leds for your personal NeoPixel LED strip. Also, insure the #define DATA_PIN is set to the pin on your ESP32 that the data wire from the NeoPixel is connected to. Finally, change the ssid and password values to the wifi network you will be using. 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/44142919/205474978-ce9c8957-f54b-485b-ae8d-288ad479a7de.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/44142919/205474978-ce9c8957-f54b-485b-ae8d-288ad479a7de.png">
+  <img alt="Image Failed to Display">
+</picture>
 
 
 
